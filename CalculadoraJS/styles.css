@@ -1,0 +1,71 @@
+/* CUERPO */
+body{
+  height: 700px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+}
+.calculator{
+  width: 260px;
+  background: #e5e5e5;
+  border: 3px solid #999;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+/* PANTALLA */
+.calculator__display{
+  background: #9db39d;
+  color: #1b2b1b;
+  font-size: 2rem;
+  padding: 12px;
+  text-align: right;
+  border: 2px inset #6f846f;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+
+/* TECLAS */
+.calculator__keys{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+/* BOTONES NORMALES */
+button{
+  padding: 16px;
+  font-size: 1.1rem;
+  background: #d6d6d6;
+  border: 2px outset #f0f0f0;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 2px 0 #999;
+}
+button:active{
+  border: 2px inset #aaa;
+  box-shadow: none;
+}
+
+/* OPERADORES */
+button[data-action] {
+  background: #c0c0c0;
+}
+
+/* BOTONES GRANDES */
+.span-2{
+  grid-column: span 2;
+}
+
+/* BOTÓN IGUAL */
+.equals{
+  grid-row: span 2;
+  background: #6e6e6e;
+  color: white;
+  font-weight: bold;
+}
+.equals:active{
+  background: #5a5a5a;
+}
